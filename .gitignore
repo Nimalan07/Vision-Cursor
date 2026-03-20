@@ -1,0 +1,95 @@
+/* ===== BODY ===== */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+
+    /* Smooth animated gradient */
+    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1c1c3c);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+}
+
+/* Background animation */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+/* ===== MAIN CONTAINER ===== */
+.container {
+    text-align: center;
+    padding: 40px 50px;
+
+    border-radius: 24px;
+
+    /* Glassmorphism effect */
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    /* Soft glow shadow */
+    box-shadow: 
+        0 10px 40px rgba(0, 0, 0, 0.5),
+        0 0 40px rgba(0, 255, 200, 0.1);
+
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+
+/* ===== TITLE ===== */
+h1 {
+    margin: 0 0 30px;
+
+    font-size: 28px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+    /* Gradient text */
+    background: linear-gradient(90deg, #00ffcc, #00aaff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Subtle glow */
+    text-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
+}
+
+
+/* ===== VIDEO CONTAINER ===== */
+.video-container img {
+    width: 640px;
+    height: 480px;
+
+    border-radius: 16px;
+
+    /* Clean border */
+    border: 1px solid rgba(0, 255, 204, 0.4);
+
+    /* Better glow */
+    box-shadow: 
+        0 0 20px rgba(0, 255, 204, 0.2),
+        0 0 60px rgba(0, 255, 204, 0.05);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-container img:hover {
+    transform: scale(1.02);
+    box-shadow: 
+        0 0 30px rgba(0, 255, 204, 0.4),
+        0 0 80px rgba(0, 255, 204, 0.1);
+}
