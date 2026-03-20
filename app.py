@@ -1,3 +1,9 @@
+import os
+import logging
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+os.environ['GLOG_minloglevel'] = '2'
+logging.getLogger('tensorflow').setLevel(logging.FATAL)
 from flask import Flask, render_template, Response
 import cv2
 import pyautogui
@@ -5,7 +11,6 @@ import threading
 import time
 from core.hand_tracker import HandTracker
 from core.action_controller import ActionController
-
 app = Flask(__name__)
 tracker = HandTracker()
 
@@ -28,8 +33,6 @@ def background_tracking():
         frame = cv2.flip(frame, 1)
         frame = tracker.find_hands(frame)
         lm_list = tracker.get_position(frame)
-        
-        # Draw the new active tracking area
         cv2.rectangle(frame, (action.frame_r_x, action.frame_r_y), 
                       (action.cam_w - action.frame_r_x, action.cam_h - action.frame_r_y), 
                       (255, 0, 255), 2)
