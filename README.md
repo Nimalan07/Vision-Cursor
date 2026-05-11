@@ -1,6 +1,6 @@
 # Vision-Cursor:AI Virtual Mouse
 
-A real-time, gesture-controlled virtual mouse built with Python, computer vision, and deep learning. This project allows users to control their computer's cursor, click, and scroll using hand gestures captured through a standard webcam. It features a lightweight Flask backend and a modern Glassmorphism web UI.
+A real-time, gesture-controlled virtual mouse built with Python, computer vision, and deep learning. This project allows users to control their computer's cursor, click,and scroll using hand gestures captured through a standard webcam. It features a lightweight Flask backend and a modern Glassmorphism web UI.
 
 ## Features
 
