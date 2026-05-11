@@ -8,7 +8,7 @@ A real-time, gesture-controlled virtual mouse built with Python, computer vision
 * **Gesture Clicking**: Execute left-clicks by pinching your index and middle fingers together.
 * **Vertical Scrolling**: Scroll through web pages and documents by raising three fingers and moving your hand up or down.
 * **Background Processing**: The AI tracking runs on a separate background thread, allowing the controller to work seamlessly even when the dashboard is minimized or closed.
-* **Modern Dashboard UI**: A sleek, dark-mode web interface to monitor your camera feed and active tracking area.
+* **Modern Dashboard UI**:A sleek, dark-mode web interface to monitor your camera feed and active tracking area.
 
 ## Tech Stack
 
